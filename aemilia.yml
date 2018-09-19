@@ -1,0 +1,21 @@
+build:
+  artifacts:
+    baseDirectory: public
+    discardPaths: true
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules
+  phases:
+    pre_build:
+      commands:
+        - yarn install
+    build:
+      commands:
+        - yarn run build
+    post_build:
+      commands: []
+env:
+  variables: []
+version: 0.1
